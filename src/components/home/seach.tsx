@@ -1,6 +1,5 @@
 import {
   Box,
-
   Flex,
   Image,
   Input,
@@ -8,7 +7,6 @@ import {
   ModalBody,
   ModalCloseButton,
   ModalContent,
-
   ModalOverlay,
   Text,
   useDisclosure,
@@ -18,29 +16,39 @@ import {
 import { searchResults } from "../../mocks/seachResult";
 import { FaSearch } from "react-icons/fa";
 import { IconButton } from "./iconFunctionButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const SeachModal = () => {
+const SearchModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [results, setResults] = useState<typeof searchResults>([]);
 
-  const handleSearch = (term: string) => {
-    setSearchTerm(term);
-    if (term.trim() === "") {
-      setResults([]); 
-    } else {
-      const filteredResults = searchResults.filter((item) =>
-        item.title.toLowerCase().includes(term.toLowerCase())
-      );
-      setResults(filteredResults);
+  useEffect(() => {
+    if (searchTerm.trim() === "") {
+      setResults([]);
+      return;
     }
+
+    const filteredResults = searchResults.filter((item) =>
+      item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    console.log(filteredResults);
+    console.log(searchTerm.toLowerCase());
+
+    setResults(filteredResults);
+  }, [searchTerm]); 
+
+
+  const handleOpen = () => {
+    setSearchTerm("");
+    setResults([]);
+    onOpen();
   };
 
   return (
     <>
       <IconButton
-        callback={onOpen}
+        callback={handleOpen}
         icon={<FaSearch />}
         text="Search"
         position="left"
@@ -49,20 +57,21 @@ const SeachModal = () => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent bg={"componentBody"}>
+          <ModalCloseButton />
           <Input
             placeholder="Search for songs, albums, or artists..."
             value={searchTerm}
-            onChange={(e) => handleSearch(e.target.value)}
+            onChange={(e) => setSearchTerm(e.target.value)}
             size="lg"
             borderRadius="md"
+            autoFocus
           />
-          <ModalCloseButton />
           <ModalBody>
-            {results.length > 0 && (
+            {results.length > 0 ? (
               <VStack spacing={4} align="stretch">
-                {results.map((result) => (
+                {results.map((result, index) => (
                   <Flex
-                    key={result.id}
+                    key={index}
                     align="center"
                     gap={4}
                     p={3}
@@ -87,6 +96,10 @@ const SeachModal = () => {
                   </Flex>
                 ))}
               </VStack>
+            ) : (
+              <Text textAlign="center" color="gray.500">
+                Nenhum resultado encontrado.
+              </Text>
             )}
           </ModalBody>
         </ModalContent>
@@ -95,4 +108,4 @@ const SeachModal = () => {
   );
 };
 
-export default SeachModal;
+export default SearchModal;

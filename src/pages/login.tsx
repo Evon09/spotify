@@ -8,8 +8,10 @@ import AppleIcon from "../assets/icons/apple";
 import FacebookIcon from "../assets/icons/facebook";
 import { IconButtonLogin } from "../components/login/loginIconButton";
 import { LoginForm } from "../components/login/loginForm";
+import { useAuth } from "../auth/AuthContext";
 
 function Login() {
+  const { login } = useAuth();
   const loginMethod = [
     { text: "Google", icon: GoogleIcon },
     { text: "Facebook", icon: FacebookIcon },
@@ -60,6 +62,8 @@ function Login() {
                 fontSize={{ base: "sm", md: "md", lg: "lg" }}
                 callback={() => {
                   alert(`login feito com ${item.text}`);
+                  const fakeToken = "fake_jwt_token";
+                  login(fakeToken);
                 }}
               />
             ))}

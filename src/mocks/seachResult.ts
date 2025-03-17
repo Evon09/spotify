@@ -33,8 +33,8 @@ const transformPlaylists = (playlists: Playlist[]): SearchResult[] => {
   }));
 };
 
-const transformArtists = (playlists: Artist[]): SearchResult[] => {
-  return playlists.map((item) => ({
+const transformArtists = (artist: Artist[]): SearchResult[] => {
+  return artist.map((item) => ({
     id: item.id,
     title: item.name,
     description: "Artist",
