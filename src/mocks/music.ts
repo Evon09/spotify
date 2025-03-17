@@ -1,3 +1,11 @@
+export interface Playlist {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  songs: number;
+}
+
 export const playlists = [
   {
     id: 1,

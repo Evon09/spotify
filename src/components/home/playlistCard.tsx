@@ -30,14 +30,14 @@ function PlaylistCard({
       bg="componentBody"
       flex={7}
       display={display}
-      position="relative" 
+      position="relative"
       h={height}
     >
       <Flex direction="column" h="100%">
         <Box>
           <IconButton icon={<FaBook />} text="Your Library" position="left" />
           <Stack direction="row" paddingX={5} mb={4}>
-            <Badge colorScheme="cardBg">Play list</Badge>
+            <Badge colorScheme="cardBg">PlayList</Badge>
             <Badge colorScheme="cardBg">Others</Badge>
           </Stack>
         </Box>
@@ -68,25 +68,20 @@ function PlaylistCard({
                 justify="left"
                 align="center"
                 h="45px"
-                minH="45px" 
+                minH="45px"
                 gap={2}
                 color="text"
-                flexShrink={0} 
+                flexShrink={0}
               >
                 <Image
-                  objectFit="cover" 
+                  objectFit="cover"
                   w="45px"
                   h="100%"
                   src={playlist.imageUrl}
                   alt={`${playlist.title} image`}
                   borderRadius={5}
                 />
-                <VStack
-                  overflow="hidden"
-                  align="start"
-                  gap={0}
-                  flex={1} 
-                >
+                <VStack overflow="hidden" align="start" gap={0} flex={1}>
                   <Text noOfLines={1}>{playlist.title}</Text>
                   <Text fontSize="sm" color="musicCardText">
                     Playlist • {playlist.songs}{" "}
@@ -97,7 +92,6 @@ function PlaylistCard({
             </Tooltip>
           ))}
         </Flex>
-
       </Flex>
     </Card>
   );

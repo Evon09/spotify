@@ -1,3 +1,48 @@
+import { Artist, artists } from "./artistis";
+import { Playlist, playlists } from "./music";
+import { RecentlyPlayed, recentlyPlayed } from "./recentlyPlayed";
+
+export interface SearchResult {
+  id: number;
+  title: string;
+  description: string;
+  type: string;
+  image: string;
+}
+
+const transformRecentlyPlayed = (
+  recentlyPlayed: RecentlyPlayed[]
+): SearchResult[] => {
+  return recentlyPlayed.map((item) => ({
+    id: item.id,
+    title: item.title,
+    description: `Song by ${item.artist}`,
+    type: "song",
+    image: item.albumArt,
+  }));
+};
+
+
+const transformPlaylists = (playlists: Playlist[]): SearchResult[] => {
+  return playlists.map((item) => ({
+    id: item.id,
+    title: item.title,
+    description: "Playlist",
+    type: "playlist",
+    image: item.imageUrl,
+  }));
+};
+
+const transformArtists = (playlists: Artist[]): SearchResult[] => {
+  return playlists.map((item) => ({
+    id: item.id,
+    title: item.name,
+    description: "Artist",
+    type: "artist",
+    image: item.image,
+  }));
+};
+
 export const searchResults = [
   {
     id: 1,
@@ -69,4 +114,7 @@ export const searchResults = [
     type: "song",
     image: "https://picsum.photos/60/60?random=10",
   },
+  ...transformRecentlyPlayed(recentlyPlayed),
+  ...transformPlaylists(playlists),
+  ...transformArtists(artists),
 ];

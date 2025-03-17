@@ -20,7 +20,7 @@ function ResponsiveCard() {
   return (
     <Card bg="componentBody" flex={1}>
       <SeachModal />
-      <IconButton icon={<FaHome></FaHome>} text="Search" position="left" />
+      <IconButton icon={<FaHome></FaHome>} text="Home" position="left" />
       <IconButton
         icon={<FaBars></FaBars>}
         text="Menu"

@@ -1,3 +1,10 @@
+export interface RecentlyPlayed {
+  id: number;
+  title: string;
+  artist: string;
+  albumArt: string;
+}
+
 export const recentlyPlayed = [
   {
     id: 1,

@@ -44,26 +44,28 @@ function Header() {
 
         {user ? (
           <Flex align="center">
-            <Text
-              fontSize={"md"}
-              color={"white"}
-              display={{ base: "none", md: "block" }}
-            >
-              {mockUser.name}
-            </Text>
             <Menu>
               <MenuButton as={Button} border={"0px"}>
-                <Avatar
-                  p={2}
-                  size="md"
-                  name={mockUser.name}
-                  src={mockUser.profileImage}
-                />
+                <Flex align="center">
+                  <Text
+                    fontSize={"md"}
+                    color={"white"}
+                    display={{ base: "none", md: "block" }}
+                  >
+                    {mockUser.name}
+                  </Text>
+
+                  <Avatar
+                    p={2}
+                    size="md"
+                    name={mockUser.name}
+                    src={mockUser.profileImage}
+                  />
+                </Flex>
               </MenuButton>
 
               <MenuList bg={"cardBody"}>
                 <MenuItem isDisabled bg={"cardBody"}>
-             
                   {mockUser.email}
                 </MenuItem>
 

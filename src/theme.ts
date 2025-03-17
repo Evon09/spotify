@@ -63,7 +63,7 @@ const theme = extendTheme({
       },
       btnBorder: {
         default: "gray.300",
-        _dark: "gray.200",
+        _dark: "gray.300",
       },
       btnText: {
         default: "gray.300",

@@ -1,3 +1,9 @@
+export interface Artist {
+  id: number;
+  name: string;
+  image: string;
+}
+
 export const artists = [
   {
     id: 1,
