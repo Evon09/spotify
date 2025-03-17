@@ -1,44 +1,45 @@
 # Spotify Clone
 
-Este projeto é um clone do **Spotify** desenvolvido com **React**, **Chakra UI**, **TypeScript**, **Yup** e **React Icons**. Ele simula a funcionalidade básica do Spotify, incluindo tela de login, busca de músicas/artistas, e um player de música simples.
+This project is a **Spotify** clone built with **React**, **Chakra UI**, **TypeScript**, **Yup**, and **React Icons**. It simulates basic Spotify functionality, including login screen, music/artist search, and a simple music player.
+
+## 📌 Technologies Used
+
+- **React**: Used to build the user interface, as it is one of the most popular and efficient libraries for creating dynamic applications.
+
+- **TypeScript**: Chosen to add static typing to the code, helping to avoid errors and making the development process safer.
+
+- **Chakra UI**: A UI framework used to create beautiful and responsive interfaces easily. It was chosen because of my experience using it in previous projects.
+
+- **Yup**: A library for form validation, making it easier to check if the data entered by the user is correct.
+
+- **React Icons**: Used for icons, providing a simple and lightweight way to add custom icons to the application.
 
 
-## 📌 Tecnologias Utilizadas
+## 🚀 How to Run the Project
 
-- **React**: Usado para construir a interface de usuário, pois é uma das bibliotecas mais populares e eficientes para criar aplicações dinâmicas.
+### 1️⃣ Clone the Repository
 
-- **TypeScript**: Escolhido para adicionar tipagem estática ao código, ajudando a evitar erros e tornando o desenvolvimento mais seguro.
-
-- **Chakra UI**: Framework de UI utilizado para criar interfaces bonitas e responsivas com facilidade. Foi escolhida pois já tenho experiência em utilizá-la em projetos anteriores.
-
-- **Yup**: Biblioteca para validação de formulários, tornando mais simples verificar se os dados inseridos pelo usuário estão corretos.
-
-- **React Icons**: Usado para ícones, proporcionando uma forma simples e leve de adicionar ícones personalizados à aplicação.
-
-
-
-## 🚀 Como Executar o Projeto
-
-### 1️⃣ Clonar o Repositório
 ```sh
- git clone https://github.com/seu-usuario/seu-repositorio.git
- cd seu-repositorio
+ git clone https://github.com/Evon09/spotify.git
+ cd spotify
 ```
 
-### 2️⃣ Instalar as Dependências
+### 2️⃣ Install the Dependencies
+
 ```sh
- npm install  # ou yarn install
+ npm install  # or yarn install
 ```
 
-### 3️⃣ Executar o Projeto
+### 3️⃣ Run the Project
+
 ```sh
- npm run dev  # ou yarn dev
+ npm run dev  # or yarn dev
 ```
 
-A aplicação será iniciada em [http://localhost:3000](http://localhost:5173/) .
-Tambem e possivel acessar o deploy [aqui](https://spotify-clone-rust-omega.vercel.app/)
+The application will start at [http://localhost:3000](http://localhost:5173/).
+You can also access the deployed version [here](https://spotify-clone-rust-omega.vercel.app/)
 
-## 📂 Estrutura do Projeto
+## 📂 Project Structure
 
 ```
 /src
@@ -69,27 +70,29 @@ Tambem e possivel acessar o deploy [aqui](https://spotify-clone-rust-omega.verce
 
 ```
 
-## 📸 Capturas de Tela
+## 📸 Screenshots
 
-### Tela de Login
-![Tela de Login 1](https://github.com/user-attachments/assets/c64f0a0b-ee8c-4359-bf05-ff99a154e38c)
-![Tela de Login 2](https://github.com/user-attachments/assets/13b49173-e121-4c3c-b28d-62abee933caf)
+### Login Screen
+![Login Screen 1](https://github.com/user-attachments/assets/c64f0a0b-ee8c-4359-bf05-ff99a154e38c)
+![Login Screen 2](https://github.com/user-attachments/assets/13b49173-e121-4c3c-b28d-62abee933caf)
 
-### Tela Inicial
-![Tela Inicial 1](https://github.com/user-attachments/assets/5d94e8dd-b86e-46a5-988b-602102f06404)
-![Tela Inicial 2](https://github.com/user-attachments/assets/227f04c8-5cf3-49c7-8bd4-e02a05b5a1d7)
+### Home Screen
+![Home Screen 1](https://github.com/user-attachments/assets/5d94e8dd-b86e-46a5-988b-602102f06404)
+![Home Screen 2](https://github.com/user-attachments/assets/227f04c8-5cf3-49c7-8bd4-e02a05b5a1d7)
 
-### Logout do Usuário
-![Logout do Usuário](https://github.com/user-attachments/assets/442da7db-7da5-4973-ac1f-bb8c18c01726)
+### User Logout
+![User Logout](https://github.com/user-attachments/assets/442da7db-7da5-4973-ac1f-bb8c18c01726)
 
-### Modal de Busca
-![Modal de Busca](https://github.com/user-attachments/assets/c431f577-562e-4b51-9820-a0e3e27f7c5c)
+### Search Modal
+![Search Modal](https://github.com/user-attachments/assets/c431f577-562e-4b51-9820-a0e3e27f7c5c)
 
-### Tela em Mobile
-![Tela em Mobile](https://github.com/user-attachments/assets/96f66248-06c6-43d9-86c8-648abe9d0b76)
+### Mobile Screen
+![Mobile Screen](https://github.com/user-attachments/assets/96f66248-06c6-43d9-86c8-648abe9d0b76)
 
-## 🔍 Funcionalidades
+## 🔍 Features
 
 - ✅ Login
-- ✅ Pesquisa de músicas e artistas
-- ✅ Player de música
+- ✅ Music and artist search
+- ✅ Music player
+- ✅ Dark and Light mode
+- ✅ Responsiveness
