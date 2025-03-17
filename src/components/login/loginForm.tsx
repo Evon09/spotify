@@ -21,12 +21,12 @@ import { useNavigate } from "react-router-dom";
 const loginSchema = yup.object().shape({
   login: yup
     .string()
-    .required("Email ou nome de usuário é obrigatório")
+    .required("Email or username is required")
     .transform((value) => value?.trim()),
   password: yup
     .string()
-    .required("Senha é obrigatória")
-    .min(6, "A senha deve ter pelo menos 6 caracteres"),
+    .required("Password is required")
+    .min(6, "Password must be at least 6 characters long"),
 });
 
 export function LoginForm() {
@@ -50,29 +50,30 @@ export function LoginForm() {
 
   const handleLogin = async (data: { login: string; password: string }) => {
     try {
-
+  
       await new Promise((resolve, reject) => {
         setTimeout(() => {
           if (data.password.length >= 6) resolve(true);
-          else reject(new Error("Credenciais inválidas"));
+          else reject(new Error("Invalid credentials"));
         }, 1000);
       });
+  
 
- 
       const fakeToken = "fake_jwt_token";
-      login(fakeToken); 
-
+      login(fakeToken);
+  
       toast({
-        title: "Login bem sucedido!",
+        title: "Login successful!",
         status: "success",
         duration: 2000,
         isClosable: true,
       });
     } catch (error) {
+  
       toast({
-        title: "Erro no login",
+        title: "Login error",
         description:
-          error instanceof Error ? error.message : "Erro desconhecido",
+          error instanceof Error ? error.message : "Unknown error",
         status: "error",
         duration: 2000,
         isClosable: true,

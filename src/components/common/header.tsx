@@ -68,7 +68,6 @@ function Header() {
                 </MenuItem>
 
                 <MenuItem onClick={logout} bg={"cardBody"}>
-              
                   Logout
                 </MenuItem>
               </MenuList>

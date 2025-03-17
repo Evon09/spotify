@@ -10,7 +10,7 @@ export const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   const location = useLocation();
 
   if (loading) {
-    return <div>Carregando...</div>; 
+    return <div>Loading...</div>; 
   }
 
   return user ? (

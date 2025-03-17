@@ -25,11 +25,10 @@ const SeachModal = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [results, setResults] = useState<typeof searchResults>([]);
 
-  // Função para filtrar os resultados com base no termo de pesquisa
   const handleSearch = (term: string) => {
     setSearchTerm(term);
     if (term.trim() === "") {
-      setResults([]); // Limpa os resultados se o termo estiver vazio
+      setResults([]); 
     } else {
       const filteredResults = searchResults.filter((item) =>
         item.title.toLowerCase().includes(term.toLowerCase())
