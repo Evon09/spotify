@@ -98,7 +98,7 @@ const SearchModal = () => {
               </VStack>
             ) : (
               <Text textAlign="center" color="gray.500">
-                Nenhum resultado encontrado.
+                No results found.
               </Text>
             )}
           </ModalBody>
