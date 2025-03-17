@@ -1,54 +1,98 @@
-# React + TypeScript + Vite
+# Spotify Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **Spotify** clone built with **React**, **Chakra UI**, **TypeScript**, **Yup**, and **React Icons**. It simulates basic Spotify functionality, including login screen, music/artist search, and a simple music player.
 
-Currently, two official plugins are available:
+## 📌 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Used to build the user interface, as it is one of the most popular and efficient libraries for creating dynamic applications.
 
-## Expanding the ESLint configuration
+- **TypeScript**: Chosen to add static typing to the code, helping to avoid errors and making the development process safer.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Chakra UI**: A UI framework used to create beautiful and responsive interfaces easily. It was chosen because of my experience using it in previous projects.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Yup**: A library for form validation, making it easier to check if the data entered by the user is correct.
+
+- **React Icons**: Used for icons, providing a simple and lightweight way to add custom icons to the application.
+
+
+## 🚀 How to Run the Project
+
+### 1️⃣ Clone the Repository
+
+```sh
+ git clone https://github.com/Evon09/spotify.git
+ cd spotify
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Install the Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+ npm install  # or yarn install
 ```
+
+### 3️⃣ Run the Project
+
+```sh
+ npm run dev  # or yarn dev
+```
+
+The application will start at [http://localhost:3000](http://localhost:5173/).
+You can also access the deployed version [here](https://spotify-clone-rust-omega.vercel.app/)
+
+## 📂 Project Structure
+
+```
+/src
+  ├── assets             # Static files such as images, fonts, and icons
+  │   ├── Fonts
+  │   ├── Icons
+  ├── auth               # Authentication logic (login, logout, etc.)
+  ├── components         # Reusable components across the app
+  │   ├── login          # Components related to the login screen
+  │   │   ├── loginForm.tsx
+  │   │   ...
+  │   ├── home           # Components for the home screen (e.g., Search button)
+  │   │   ├── playListCards.tsx
+  │   │   ...
+  │   ├── common         # Common components (e.g., Header, Footer)
+  │   │   ├── header.tsx
+  │   │   ...
+  ├── mocks              # Mock data for development
+  │   ├── searchResults.ts
+  │   ├── user.ts
+  │   ...
+  ├── pages              # Main pages/screens of the app
+  │   ├── home.tsx
+  │   ├── login.tsx
+  ├── style              # Styling files (CSS, Styled Components, etc.)
+  ├── App.tsx            # Main app file
+  ├── main.tsx           # Entry point for the app
+
+```
+
+## 📸 Screenshots
+
+### Login Screen
+![Login Screen 1](https://github.com/user-attachments/assets/c64f0a0b-ee8c-4359-bf05-ff99a154e38c)
+![Login Screen 2](https://github.com/user-attachments/assets/13b49173-e121-4c3c-b28d-62abee933caf)
+
+### Home Screen
+![Home Screen 1](https://github.com/user-attachments/assets/5d94e8dd-b86e-46a5-988b-602102f06404)
+![Home Screen 2](https://github.com/user-attachments/assets/227f04c8-5cf3-49c7-8bd4-e02a05b5a1d7)
+
+### User Logout
+![User Logout](https://github.com/user-attachments/assets/442da7db-7da5-4973-ac1f-bb8c18c01726)
+
+### Search Modal
+![Search Modal](https://github.com/user-attachments/assets/c431f577-562e-4b51-9820-a0e3e27f7c5c)
+
+### Mobile Screen
+![Mobile Screen](https://github.com/user-attachments/assets/96f66248-06c6-43d9-86c8-648abe9d0b76)
+
+## 🔍 Features
+
+- ✅ Login
+- ✅ Music and artist search
+- ✅ Music player
+- ✅ Dark and Light mode
+- ✅ Responsiveness
